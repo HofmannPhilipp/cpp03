@@ -6,9 +6,11 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:08:27 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/21 11:22:13 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/21 13:28:50 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <string>
 
@@ -29,4 +31,5 @@ public:
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+	void printStatus() const;
 };
