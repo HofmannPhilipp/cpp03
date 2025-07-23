@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:46:11 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/23 10:47:54 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/23 13:57:04 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ public:
 	~ScavTrap();
 	ScavTrap &operator=(const ScavTrap &other);
 	void guardGate();
-	void attack(const std::string &target);
+	void attack(const std::string &target) override;
 };
