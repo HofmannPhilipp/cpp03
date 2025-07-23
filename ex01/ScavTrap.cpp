@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:45:54 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/22 11:12:14 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/23 13:49:24 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ void ScavTrap::attack(const std::string &target)
 		return;
 	}
 	std::cout << "🏹 ScavTrap " << getName() << " attacks " << target
-			  << ", causing " << energyPoints << " points of damage!" << std::endl;
+			  << ", causing " << getAttackDamage() << " points of damage!" << std::endl;
 	setEnergyPoints(energyPoints--);
 }
