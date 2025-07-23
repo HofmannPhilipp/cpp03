@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:42:03 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/23 13:18:25 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/23 14:06:57 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap(), name("DefaultDi
 	setAttackDamage(FragTrap::getAttackDamage());
 	std::cout << "💎 DiamondTrap Default constructor called for " << this->name << std::endl;
 }
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), name(name)
 {
 	setHitPoints(FragTrap::getHitPoints());
 	setEnergyPoints(ScavTrap::getEnergyPoints());

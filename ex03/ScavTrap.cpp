@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:45:54 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/23 13:59:07 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/23 14:04:07 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	setName("Scavy");
+	setName("DefaultScavy");
 	setHitPoints(100);
 	setEnergyPoints(50);
 	setAttackDamage(20);
