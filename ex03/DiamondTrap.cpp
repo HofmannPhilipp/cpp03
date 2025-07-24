@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:42:03 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/23 14:06:57 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:17:56 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(other), FragTrap(other)
 {
 	std::cout << "🛠️ DiamondTrap Copy constructor called for " << other.getName() << std::endl;
+	*this = other;
 }
 
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
@@ -47,11 +48,11 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "💀 DiamondTrap Destructor called for " << name << std::endl;
+	std::cout << "💀 DiamondTrap Destructor called for " << this->name << std::endl;
 }
 
 void DiamondTrap::whoAmI()
 {
 	std::cout << "🤖 [whoAmI] I am DiamondTrap \"" << this->name
-	          << "\", but my ClapTrap name is \"" << ClapTrap::getName() << "\"." << std::endl;
+			  << "\", but my ClapTrap name is \"" << ClapTrap::getName() << "\"." << std::endl;
 }
