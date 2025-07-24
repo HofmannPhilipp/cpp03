@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:08:27 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/21 13:28:50 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/24 10:09:53 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ private:
 public:
 	ClapTrap();
 	ClapTrap(std::string name);
-	ClapTrap(ClapTrap &other);
+	ClapTrap(const ClapTrap &other);
 	~ClapTrap();
 	ClapTrap &operator=(ClapTrap &other);
 	void attack(const std::string &target);

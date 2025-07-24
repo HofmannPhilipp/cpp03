@@ -6,14 +6,18 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:07:54 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/22 11:16:52 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/24 09:58:29 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap() : name("DefaultTrap"), hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap()
+	: name("DefaultTrap"),
+	  hitPoints(10),
+	  energyPoints(10),
+	  attackDamage(0)
 {
 	std::cout << "🛠️ ClapTrap Default constructor called for " << name << std::endl;
 }
@@ -24,10 +28,12 @@ ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(1
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
+	: name(other.name),
+	  hitPoints(other.hitPoints),
+	  energyPoints(other.energyPoints),
+	  attackDamage(other.attackDamage)
 {
-
 	std::cout << "🛠️ ClapTrap Copy constructor called for " << other.getName() << std::endl;
-	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
